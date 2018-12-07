@@ -100,5 +100,11 @@ TARGET_USES_MKE2FS := true
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
 
+# Sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
+
 # Inherit from the proprietary version
 -include vendor/nokia/sdm660-common/BoardConfigVendor.mk
